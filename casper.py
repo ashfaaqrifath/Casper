@@ -132,7 +132,7 @@ def Commands(command):
             return
 
         elif "what are you" in command:
-            casperIntro1 = "I'm Casper, version 1 point 0, your virtual desktop assistant."
+            casperIntro1 = "I'm Casper, version 1 point 1, your virtual desktop assistant."
             print(casperIntro1)
             casper_speaks(casperIntro1)
             return
@@ -147,13 +147,8 @@ def Commands(command):
             casper_speaks("you're welcome! i'm happy to help")
             return
 
-        elif "useless" in command:
-            print("whatever, you're a pathetic excuse for a human.")
-            casper_speaks("whatever, you're a pathetic excuse for a human.")
-            return
-
         elif "named after" in command:
-            casperIntro2 = "i was named after the cat of my developer, which was named after the famous, Casper the friendly ghost cartoon show."
+            casperIntro2 = "i was named after the famous, Casper the friendly ghost cartoon show."
             print(casperIntro2)
             casper_speaks(casperIntro2)
             return
@@ -244,7 +239,7 @@ if __name__ == "__main__":
     print(Fore.YELLOW + '''
     ░█▀▀█ ░█▀▀█ ░█▀▀▀█ ░█▀▀█ ░█▀▀▀ ░█▀▀█ 
     ░█    ░█▄▄█  ▀▀▀▄▄ ░█▄▄█ ░█▀▀▀ ░█▄▄▀ 
-    ░█▄▄█ ░█ ░█ ░█▄▄▄█ ░█    ░█▄▄▄ ░█ ░█ ver 1.0
+    ░█▄▄█ ░█ ░█ ░█▄▄▄█ ░█    ░█▄▄▄ ░█ ░█ ver 1.1.0
             VIRTUAL ASSISTANT''')
 
     casper_speaks("Hello, i'm Casper, your virtual assistant, how may i help you?")
