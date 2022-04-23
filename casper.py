@@ -157,6 +157,12 @@ def Commands(command):
         elif "connect" in command.lower():
             open_application(command.lower())
             return
+        
+        elif "voice" in  command:
+            casper_speak(speak="Voice engine changed.", voice=casper_voice)
+
+        elif "stop" in command or "listening" in command.lower():
+            print(" ")
             
         else:
             print("I can search the web for you, Do you want to continue?")
@@ -206,11 +212,22 @@ if __name__ == "__main__":
             VIRTUAL ASSISTANT''')
 
     casper_speaks("Hello sir, your virtual assistant, how may i help you?")
-
-    while(1):
-        text = casper_listen()
-        if text == 0:
+            
+        while(1):
+        speech = casper_listen()
+        if speech == 0:
             continue
+        
+        if "voice" in str(speech):
+            if "change" in str(speech):
+                casper_voice = 2
+            if "default" in str(speech):
+                casper_voice = 3
+
+        elif "stop" in str(speech):
+            print("speech recognition disabled for 1 minute")
+            casper_speak(speak="speech recognition disabled for 1 minute", voice=casper_voice)
+            time.sleep(60)
 
         if "power down" in str(text):
             casper_speaks("assistant power down, see you later.")
