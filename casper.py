@@ -102,14 +102,6 @@ def open_application(command):
         os.startfile("C:/Program Files (x86)/Microsoft Office/root/Office16/MSACCESS.EXE")
         return
 
-    elif "connect" in command:
-        print("connecting wifi")
-        casper_speaks("connecting wifi")
-        subprocess.call([r'C:\Users\ashfa\OneDrive\Documents\Batch files\Wifi Shortcut.bat'])
-        print("connected wifi")
-        casper_speaks("connected wifi")
-        return
-
 
 def knowledge(question):
 
@@ -142,11 +134,6 @@ def Commands(command):
             casper_speaks("i was developed and modified by Ashfaaq Rifath.")
             return
 
-        elif "thank you" in command:
-            print("you're welcome! i'm happy to help")
-            casper_speaks("you're welcome! i'm happy to help")
-            return
-
         elif "named after" in command:
             casperIntro2 = "i was named after the famous, Casper the friendly ghost cartoon show."
             print(casperIntro2)
@@ -169,20 +156,12 @@ def Commands(command):
             casper_speaks("I've made a note of that.")
             return
 
-        elif "account" in command:
-            search_web(command)
-            return
-
         elif "open" in command:
             open_application(command.lower())
             return
 
         elif "connect" in command.lower():
             open_application(command.lower())
-            return
-
-        elif "time" in command.lower():
-            say_time()
             return
             
         else:
@@ -208,15 +187,6 @@ def search_web(command):
         print(f"searching youtube for {yt_search}")
         casper_speaks(f"searching youtube for {yt_search}")
         webbrowser.open(f"http://www.youtube.com/results?search_query={yt_search}")
-        return
-
-    elif "wikipedia" in command.lower():
-        print("what do you want to search?")
-        casper_speaks("what do you want to search?")
-        wiki_search = casper_listen()
-        print(f"searching wikipedia for {wiki_search}")
-        casper_speaks(f"searching wikipedia for {wiki_search}")
-        webbrowser.open(f"https://en.wikipedia.org/wiki/{wiki_search}")
         return
 
     elif "github" in command or "account" in command.lower():
