@@ -14,7 +14,6 @@ import time
 
 
 def casper_speaks(speak):
-
     engine = pyttsx3.init("sapi5")
     engine.setProperty('rate', 150)
     voices = engine.getProperty('voices')
@@ -24,13 +23,12 @@ def casper_speaks(speak):
 
 
 def casper_listen():
-
-    rObject = sr.Recognizer()
+    r = sr.Recognizer()
     audio = ''
 
     with sr.Microphone() as source:
         print(Fore.GREEN + "Listening...")
-        audio = rObject.listen(source, phrase_time_limit = 15)
+        audio = r.listen(source, phrase_time_limit = 15)
     print("Processing...")
 
     try:
@@ -60,7 +58,6 @@ def casper_listen():
 
 
 def makeNote(take_note):
-
     date = datetime.datetime.now()
     note_name = str(date).replace(":", "-") + "-note.txt"
     with open(note_name, "w") as noteFile:
@@ -69,7 +66,6 @@ def makeNote(take_note):
     subprocess.Popen(["notepad.exe", note_name])
 
 def say_time():
-
     time = str(datetime.datetime.now())
     print(time)
     hour = time[11:13]
@@ -104,7 +100,6 @@ def open_application(command):
 
 
 def knowledge(question):
-
     #wolframalpha api ID
     app_id = 'Q3RGAU-UWQT2U8W2J'
 
@@ -117,7 +112,6 @@ def knowledge(question):
 
 
 def Commands(command):
-
     try:
         if "search" in command or "YouTube" in command or "wikipedia" in command.lower():
             search_web(command)
@@ -179,7 +173,6 @@ def Commands(command):
 
 
 def search_web(command):
-
     if "youtube" in command.lower():
         print("what do you want to search?")
         casper_speaks("what do you want to search?")
@@ -209,17 +202,17 @@ if __name__ == "__main__":
     print(Fore.YELLOW + '''
     ░█▀▀█ ░█▀▀█ ░█▀▀▀█ ░█▀▀█ ░█▀▀▀ ░█▀▀█ 
     ░█    ░█▄▄█  ▀▀▀▄▄ ░█▄▄█ ░█▀▀▀ ░█▄▄▀ 
-    ░█▄▄█ ░█ ░█ ░█▄▄▄█ ░█    ░█▄▄▄ ░█ ░█ ver 1.1.0
+    ░█▄▄█ ░█ ░█ ░█▄▄▄█ ░█    ░█▄▄▄ ░█ ░█ ver 1.2.3
             VIRTUAL ASSISTANT''')
 
-    casper_speaks("Hello, i'm Casper, your virtual assistant, how may i help you?")
+    casper_speaks("Hello sir, your virtual assistant, how may i help you?")
 
     while(1):
         text = casper_listen()
         if text == 0:
             continue
 
-        if "sleep" in str(text):
+        if "power down" in str(text):
             casper_speaks("assistant power down, see you later.")
             break
 
