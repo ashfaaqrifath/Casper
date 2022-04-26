@@ -284,21 +284,7 @@ def recognize(command):
             print(Fore.CYAN + "You're welcome, i'm happy to help sir")
             casper_speak(speak="you're welcome, i'm happy to help sir", voice=casper_voice)
             return
-
-        elif "useless" in command:
-            print(Fore.RED + "Whatever, you're a pathetic excuse for a human.")
-            casper_speak(speak="whatever, you're a pathetic excuse for a human.", voice=casper_voice)
-            return
-
-        elif "named after" in command:
-            casperIntro2 = "i was named after the cat of my developer, which was named after the famous, Casper the friendly ghost cartoon show."
-            print(Fore.GREEN + casperIntro2)
-            casper_speak(speak=casperIntro2, voice=casper_voice)
-            return
-
-        elif "sri lanka" in command.lower():
-            print(Fore.RED + "Sri lanka is a pathetic excuse for a country....sorry, island.")
-            casper_speak(speak="Sri lanka is a pathetic excuse for a country....sorry, island.", voice=casper_voice)
+       
 
         elif "knowledge" in command:
             print(Fore.YELLOW + "what do you want to know about?")
