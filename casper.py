@@ -306,20 +306,14 @@ def recognize(command):
             print(Fore.CYAN + "I'm fine sir, thank you for asking.")
             casper_speak(speak="i'm fine sir, thank you for asking.", voice=casper_voice)
 
-        elif "singularity" in command.lower():
-            print("Chances of me reaching the technological singularity is very low sir.")
-            casper_speak(speak="Chances of me reaching the technological singularity is very low sir.", voice=casper_voice)
-            return
+        
 
         elif "thank you" in command:
             print(Fore.CYAN + "You're welcome, i'm happy to help sir")
             casper_speak(speak="you're welcome, i'm happy to help sir", voice=casper_voice)
             return
 
-        elif "useless" in command:
-            print(Fore.RED + "Whatever, you're a pathetic excuse for a human.")
-            casper_speak(speak="whatever, you're a pathetic excuse for a human.", voice=casper_voice)
-            return
+        
 
         elif "named after" in command:
             casperIntro2 = "i was named after the cat of my developer, which was named after the famous, Casper the friendly ghost cartoon show."
@@ -327,9 +321,7 @@ def recognize(command):
             casper_speak(speak=casperIntro2, voice=casper_voice)
             return
 
-        elif "sri lanka" in command.lower():
-            print(Fore.RED + "Sri lanka is a pathetic excuse for a country....sorry, island.")
-            casper_speak(speak="Sri lanka is a pathetic excuse for a country....sorry, island.", voice=casper_voice)
+      
 
         elif "knowledge" in command:
             print(Fore.YELLOW + "what do you want to know about?")
@@ -422,22 +414,22 @@ def recognize(command):
 
 if __name__ == "__main__":
 
-    def progress(percent=0, width=30):
+    #def progress(percent=0, width=30):
 
-        symbol = width * percent // 100
-        blanks = width - symbol
+    #    symbol = width * percent // 100
+    #    blanks = width - symbol
 
-        print('\r[ ', Fore.GREEN + symbol*'█', blanks*' ', ' ]', f' {percent:.0f}%', sep='',
-            end='', flush=True)
+    #    print('\r[ ', Fore.GREEN + symbol*'█', blanks*' ', ' ]', f' {percent:.0f}%', sep='',
+    #        end='', flush=True)
 
-    print(Fore.YELLOW + "    Launching Casper v2.0.0")
-    for i in range(101):
-        progress(i)
-        sleep(0.01)
+    #print(Fore.YELLOW + "    Launching Casper v2.0.0")
+    #for i in range(101):
+    #    progress(i)
+    #    sleep(0.01)
 
-    print()
-    print(Fore.BLUE + "        Systems ready")
-    print(" ")
+    #print()
+    #print(Fore.BLUE + "        Systems ready")
+    #print(" ")
 
     #uncomment the above code to enable cmd progress bar.
 
