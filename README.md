@@ -77,5 +77,4 @@ Copyright © 2022 Ashfaaq Rifath - Casper v2.2.0 [![MIT License](https://img.shi
 
 
 ##
-![Logo](https://ashfaaqrifath.github.io/aqlogo6.png)
-<center><img src="https://ashfaaqrifath.github.io/aqlogo6.png" height="200" widht="200"></center>
+<center><img src="https://ashfaaqrifath.github.io/aqlogo6.png" height="150" widht="150"></center>
