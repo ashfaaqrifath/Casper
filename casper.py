@@ -36,19 +36,19 @@ def casper_listen():
     audio = ''
 
     with sr.Microphone() as source:
-        print("")
-        text1 = "Listening...".center(100)
-        print(Fore.YELLOW + text1)
+        #print("")
+        #print(Fore.YELLOW + "Listening...".center(100))
         audio = r.listen(source, phrase_time_limit=15)
-    print(Fore.BLUE + "Processing...".center(100))
+    #print(Fore.BLUE + "Processing...".center(100))
 
     try:
         u_said = r.recognize_google(audio, language='en-US')
+        print(Fore.BLUE + "Processing...".center(100))
         print(f"(●) {u_said}".center(100))
         return u_said
 
     except:
-        print(Fore.LIGHTBLACK_EX + "Awaiting command.".center(100))
+        #print(Fore.LIGHTBLACK_EX + "Awaiting command.".center(100))
         return 0
 
 # █████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
@@ -277,8 +277,8 @@ def search_web(command):
         webbrowser.open(f"https://en.wikipedia.org/wiki/{wiki_search}")
         print(" ")
         print(Fore.LIGHTBLUE_EX + centr.center(100))
-        casper_speak(
-            speak=f"According to wikipedia, {wiki_summary}", voice=casper_voice)
+        casper_speak(speak=f"According to wikipedia, {wiki_summary}", voice=casper_voice)
+        print(Fore.YELLOW + "Listening...".center(100))
         return
 
     elif "github" in command or "account" in command.lower():
@@ -447,12 +447,6 @@ def command_engine(command):
             print(Fore.GREEN + "Voice engine changed.".center(100))
             casper_speak(speak="Voice engine changed.", voice=casper_voice)
 
-# stop Casper from taking commands for 2mins
-        # elif "stop" in command or "listening" in command or "disable" in command.lower():
-        #     print(Fore.GREEN + "Speech recognition enabled.".center(100))
-        #     casper_speak(speak="Speech recognition enabled",
-        #                  voice=casper_voice)
-
 # Casper responses (hardcoded)
         elif "introduce" in command:
             casperIntro1 = "I'm Casper, version 2 point 0, your virtual desktop assistant."
@@ -531,7 +525,7 @@ if __name__ == "__main__":
     #     print('\r[ ', Fore.GREEN + symbol* "█", blanks*' ', ' ]', f' {percent:.0f}%', sep='',
     #         end='', flush=True)
 
-    # print(Fore.YELLOW + "    Launching Casper v2.3.0")
+    # print(Fore.YELLOW + "    Launching Casper v2.4.0")
     # for i in range(101):
     #     progress(i)
     #     sleep(0.01)
@@ -546,9 +540,9 @@ if __name__ == "__main__":
     print(Fore.GREEN + '''
                                 ░█▀▀█ ░█▀▀█ ░█▀▀▀█ ░█▀▀█ ░█▀▀▀ ░█▀▀█ 
                                 ░█    ░█▄▄█  ▀▀▀▄▄ ░█▄▄█ ░█▀▀▀ ░█▄▄▀ 
-                                ░█▄▄█ ░█ ░█ ░█▄▄▄█ ░█    ░█▄▄▄ ░█ ░█ ver 2.3.0
+                                ░█▄▄█ ░█ ░█ ░█▄▄▄█ ░█    ░█▄▄▄ ░█ ░█ ver 2.4.0
                                          DESKTOP ASSISTANT''')
-    print(" ")
+    print("")
 
     nowTime = int(datetime.datetime.now().hour)
     if nowTime >= 0 and nowTime < 12:
@@ -563,7 +557,10 @@ if __name__ == "__main__":
         greet = "Good Evening sir, what can i do for you?"
         print(Fore.CYAN + greet.center(100))
 
-    #casper_speak(speak=greet, voice=casper_voice)
+    print("")
+    print(Fore.YELLOW + "Listening...".center(100))
+
+    casper_speak(speak=greet, voice=casper_voice)
 
     while(1):
         recognize = casper_listen()
@@ -576,7 +573,7 @@ if __name__ == "__main__":
             if "default" in str(recognize):
                 casper_voice = 2
 
-        elif "stand by" in str(recognize):
+        elif "stop" in str(recognize):
             print(Fore.LIGHTRED_EX +"Standby Mode initiated.".center(100))
             casper_speak(speak="Standby mode initiated.", voice=casper_voice)
             print(Fore.LIGHTBLACK_EX + "Awaiting wake command.".center(100))
@@ -610,3 +607,5 @@ if __name__ == "__main__":
             exit()
 
         command_engine(recognize)
+        print("")
+        print(Fore.YELLOW + "Listening...".center(100))
