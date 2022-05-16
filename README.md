@@ -73,7 +73,7 @@ Casper is a personal virtual assistant written in python to automate desktop tas
 
 ## License
 
-Copyright © 2022 Ashfaaq Rifath - Casper v2.3.0 [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs) 
+Copyright © 2022 Ashfaaq Rifath - Casper v2.4.0 [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs) 
 
 
 ##
