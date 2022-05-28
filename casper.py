@@ -609,3 +609,7 @@ if __name__ == "__main__":
         command_engine(recognize)
         print("")
         print(Fore.YELLOW + "Listening...".center(100))
+
+
+
+# <<< Copyright (c) 2022 Ashfaaq Rifath - Casper v2.4.0 >>>
