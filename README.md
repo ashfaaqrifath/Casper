@@ -1,4 +1,4 @@
-# CASPER
+# Casper - Desktop Assistant
 
 Casper is a personal virtual assistant written in python to automate desktop tasks just using voice commands. It can play music, take notes, search the web, open applications, send emails and more.
 
