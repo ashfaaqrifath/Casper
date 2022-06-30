@@ -1,3 +1,17 @@
+<p align="center">
+  <a href="https://getleon.ai"><img width="800" src="https://getleon.ai/img/hero-animation.gif" /></a>
+</p>
+
+<h1 align="center">
+  <a href="https://getleon.ai"><img width="96" src="https://getleon.ai/img/logo.svg" alt="Leon"></a><br>
+  Casper
+</h1>
+
+<h3><p align="center">Desktop Assistant</p></h3>
+
+
+
+
 # Casper - Desktop Assistant
 
 Casper is a personal virtual assistant written in python to automate desktop tasks just using voice commands. It can play music, take notes, search the web, open applications, send emails and more.
