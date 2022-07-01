@@ -84,4 +84,6 @@ Copyright © 2022 Ashfaaq Rifath - Casper v2.5.0
 
 
 ##
-<center><img src="https://ashfaaqrifath.github.io/aqlogo6.png" height="150" widht="150"></center>
+<h1 align="center">
+  <a href="https://getleon.ai"><img width="300" src="https://ashfaaqrifath.github.io/aqlogo6.png" alt="Ashfaaq"></a><br>
+</h1>
