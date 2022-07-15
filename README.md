@@ -5,7 +5,7 @@
   <a href="https://getleon.ai"><img width="300" src="casper_title.png" alt="Leon"></a><br>
 </h1>
 
-Casper is a personal virtual assistant written in python to automate desktop tasks just using voice commands. It can play music, take notes, search the web, open applications, send emails and more.
+Casper is a Desktop Assistant written in Python that uses Voice Recognition and a Text-To-Speech engine. It can automate tasks such as Taking notes, Searching the web, Find locations, Open and close applications, Answer questions, Send emails and more.
 
 
 ## Authors
@@ -53,19 +53,33 @@ Casper is a personal virtual assistant written in python to automate desktop tas
 ```
   pip install SpeechRecognition
 ```
-## Features
+## Functionalities
 
-- Open applications
 - Google search
+- YouTube search
 - Wikipedia search
-- Take notes
-- Date and time announcement
-- Send emails
+- Open Chrome tabs
+- Open Incognito tabs
+- Activate VPN
+- Search locations
+- Activity logging
+- Disable activity logging (Blanket mode)
+- Delete all activity logs (Deletion protocol)
+- Record audio (Recording Mode)
+- Open and close programs
 - Open files
-- Desktop shutdown/restart
-- Capture photos
+- Open Task Manager
+- WolframAlpha knowledge engine
+- News API
 - Math calculations
 - Play music
+- Take notes
+- Say the time and date
+- Change assistant voice
+- Greetings
+- Change desktop background
+- Clear recycle bin
+- Shutdown/Restart/Sign out PC
 
 
 ## Badges
