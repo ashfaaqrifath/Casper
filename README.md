@@ -75,6 +75,8 @@ Casper is a Desktop Assistant written in Python that uses Voice Recognition and 
 - Play music
 - Take notes
 - Say the time and date
+- Set timer
+- Beep on command
 - Change assistant voice
 - Greetings
 - Change desktop background
@@ -94,7 +96,7 @@ Casper is a Desktop Assistant written in Python that uses Voice Recognition and 
 
 [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
 
-Copyright © 2022 Ashfaaq Rifath - Casper v2.5.0 
+Copyright © 2022 Ashfaaq Rifath - Casper v2.6.0 
 
 
 ##
