@@ -45,7 +45,7 @@ date = datetime.datetime.now()
 
 blanket = 0
 
-casper_log(write="CASPER - DESKTOP ASSISTANT v3.0.0\n" +
+casper_log(write="CASPER - DESKTOP ASSISTANT v2.6.0\n" +
 str(date) + " \n<<< ACTIVITY LOG >>> \nBEGIN LOG >>>\n \n", var=blanket)
 
 ##################################################################################################
