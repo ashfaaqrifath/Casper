@@ -352,16 +352,6 @@ def command_engine(command):
             casper_speak(speak="You're welcome sir, i'm happy to help", voice=voice_engine)
             casper_log(Fore.CYAN + "You're welcome sir, i'm happy to help".center(100), var=blanket)
 
-        elif "useless" in command:
-            print(Fore.RED + "Whatever, you're a disgrace to the human race sir".center(100))
-            casper_speak(speak="Whatever, you're a disgrace to the human race sir", voice=voice_engine)
-            casper_log(Fore.RED + "Whatever, you're a disgrace to the human race sir".center(100), var=blanket)
-
-        elif "named after" in command:
-            print(Fore.CYAN + "I was named after the cat of my developer.".center(100))
-            casper_speak(speak="I was named after the cat of my developer.", voice=voice_engine)
-            casper_log(Fore.CYAN + "I was named after the cat of my developer.".center(100), var=blanket)
-
         else:
             print(Fore.RED + "Sorry sir, I didn't quite get that, please try again".center(100))
             casper_speak(speak="Sorry sir, I didn't quite get that, please try again", voice=voice_engine)
