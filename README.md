@@ -5,7 +5,7 @@
   <img width="300" src="casper_title.png" alt="Casper"><br>
 </h1>
 
-Casper is a Desktop Assistant written in Python that uses Voice Recognition and a Text-To-Speech engine. It can automate tasks such as Taking notes, Searching the web, Find locations, Open and close applications, Answer questions, Send emails and more.
+Casper is a Desktop Assistant written in Python that uses Voice Recognition and a Text-To-Speech engine. It can automate tasks such as Taking notes, Searching the web, Find locations, Open and close applications, Answer questions and more.
 
 
 ## Authors
