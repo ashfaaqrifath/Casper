@@ -5,8 +5,8 @@ from datetime import timedelta
 
 
 def casper_alert(bot_alert):
-   bot_token = '5679912803:AAFNf9EHAxJnqpTmzHBr0ZuaeqeLtFx1oc8'
-   my_chatID = '1813981055'
+   bot_token = 'your telegram bot token'
+   my_chatID = 'your chat ID'
    send_alert = 'https://api.telegram.org/bot' + bot_token + '/sendMessage?chat_id=' + my_chatID + '&parse_mode=Markdown&text=' + "*" + bot_alert + "*"
 
    response = requests.get(send_alert)
