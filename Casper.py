@@ -132,7 +132,7 @@ def set_timer(countdown):
 ##################################################################################################
 
 def knowledge_engine(question):
-    api_key = "Q3RGAU-UWQT2U8W2J"
+    api_key = "your API key"
     client = wolframalpha.Client(api_key)
     result = client.query(question)
     wolfram_answer = str(next(result.results).text)
