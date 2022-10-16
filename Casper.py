@@ -1,7 +1,6 @@
 import os
 import subprocess
 import sys
-from numpy import void
 import winsound
 import wolframalpha
 import colorama
@@ -14,6 +13,7 @@ import shutil
 import webbrowser
 import pyaudio
 from pathlib import Path
+from numpy import void
 from speech_engine import casper_speak
 from system_functions import system_task
 from web_functions import surf_web
@@ -46,7 +46,7 @@ log_file.close()
 
 stealth = 0
 
-chronicle_log(write="CASPER - DESKTOP ASSISTANT v2.7.0\n" +
+chronicle_log(write="CASPER - DESKTOP ASSISTANT v2.8.0\n" +
            str(date) + " \n<<< ACTIVITY LOG >>> \nBEGIN LOG >>>\n \n", var=stealth)
 
 ##################################################################################################
@@ -132,7 +132,7 @@ def set_timer(countdown):
 ##################################################################################################
 
 def knowledge_engine(question):
-    api_key = "your API key"
+    api_key = "Q3RGAU-UWQT2U8W2J"
     client = wolframalpha.Client(api_key)
     result = client.query(question)
     wolfram_answer = str(next(result.results).text)
@@ -334,10 +334,6 @@ def command_engine(command):
             say_date()
             return
 
-        elif "beep" in command.lower():
-            for b in range(3):
-                winsound.Beep(2500, 500)
-
         elif "time" in command.lower():
             say_time()
             return
@@ -353,6 +349,10 @@ def command_engine(command):
             chronicle_log(Fore.YELLOW + "What would you like me to send sir ?".center(100), var=stealth)
             chronicle_log(Fore.GREEN + "Message sent sir".center(100), var=stealth)
 
+        elif "developer" in command.lower():
+            print(Fore.GREEN + "<<< ACTIVATED DEVELOPER MODE >>>".center(100))
+            casper_speak(speak="Activated developer mode", voice=voice_engine)
+
         elif "whatsapp" in command.lower():
             print(Fore.YELLOW + "What would you like me to send sir ?".center(100))
             casper_speak(speak="What would you like me to send sir ?", voice=voice_engine)
@@ -366,9 +366,9 @@ def command_engine(command):
 
     # Casper responses (hardcoded)
         elif "introduce" in command:
-            print(Fore.CYAN + "I'm Casper, version 2 point 7, your personal desktop assistant.".center(100))
-            casper_speak(speak="I'm Casper, version 2 point 7, your personal desktop assistant.", voice=voice_engine)
-            chronicle_log(Fore.CYAN + "I'm Casper, version 2 point 7, your personal desktop assistant.".center(100), var=stealth)
+            print(Fore.CYAN + "I'm Casper, version 2 point 8, your personal desktop assistant.".center(100))
+            casper_speak(speak="I'm Casper, version 2 point 8, your personal desktop assistant.", voice=voice_engine)
+            chronicle_log(Fore.CYAN + "I'm Casper, version 2 point 8, your personal desktop assistant.".center(100), var=stealth)
 
         elif "what's my name" in command or "what is my name" in command.lower():
             print(Fore.GREEN + "Your name is Ashfaaq Rifath.".center(100))
@@ -401,8 +401,6 @@ def command_engine(command):
             chronicle_log(Fore.RED + "Sorry sir, I didn't quite get that".center(100), var=stealth)
 
     except RecursionError:
-        for b in range(3):
-            winsound.Beep(2500, 500)
         print(Fore.GREEN + "Countdown completed".center(5))
         casper_speak(speak="Countdown completed", voice=voice_engine)
     except:
@@ -417,7 +415,7 @@ if __name__ == "__main__":
     # os.system('cmd /c "CasperIntro.gif"')
     # time.sleep(4.5)
     # os.system("taskkill /IM Microsoft.Photos.exe /F")
-    os.system('cls')
+    os.system("cls")
     casper_alert("« ASSISTANT ACTIVATED »")
 
     voice_engine = 2
@@ -426,7 +424,7 @@ if __name__ == "__main__":
     print('''
                                  █▀▀█  █▀▀█  █▀▀▀█  █▀▀█  █▀▀▀  █▀▀█ 
                                  █     █▄▄█  ▀▀▀▄▄  █▄▄█  █▀▀▀  █▄▄▀ 
-                                 █▄▄█  █  █  █▄▄▄█  █     █▄▄▄  █  █ v2.7.0
+                                 █▄▄█  █  █  █▄▄▄█  █     █▄▄▄  █  █ v2.8.0
                                  ''')
 
     nowTime = int(datetime.datetime.now().hour)
@@ -465,7 +463,6 @@ if __name__ == "__main__":
         elif "Sentry mode" in str(recognize):
             print(Fore.RED + "<<< INITIATED SENTRY MODE >>>".center(100))
             casper_speak(speak="initiated sentry mode", voice=voice_engine)
-            winsound.Beep(1000, 500)
             print(Fore.LIGHTBLACK_EX + "Awaiting password".center(100))
             casper_alert("INITIATED SENTRY MODE")
 
@@ -489,7 +486,6 @@ if __name__ == "__main__":
             while True:
                 keyword = sentry_mode()
                 if keyword.count(password) > 0:
-                    winsound.Beep(1000, 500)
                     casper_alert("SENRTY MODE ACCESS GRANTED")
                     print("Welcome back sir, how can i help ?".center(100))
                     casper_speak(speak="Welcome back sir, how can i help ?", voice=voice_engine)
@@ -511,7 +507,7 @@ if __name__ == "__main__":
         elif "stand by" in str(recognize):
             print(Fore.RED + "<<< INITIATED STANDBY MODE >>>".center(100))
             casper_speak(speak="initiated STANDBY mode", voice=voice_engine)
-            winsound.Beep(1000, 500)
+            winsound.Beep(420, 200)
             casper_alert("INITIATED STANDBY MODE")
             print(Fore.LIGHTBLACK_EX + "Awaiting wake command".center(100))
 
@@ -569,5 +565,4 @@ if __name__ == "__main__":
 
 
 
-
-# <<< Copyright (c) 2022 Ashfaaq Rifath - Casper v2.7.0 >>>
+# <<< Copyright (c) 2022 Ashfaaq Rifath - Casper v2.8.0 >>>
