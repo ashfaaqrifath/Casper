@@ -8,12 +8,12 @@
 Casper is a Desktop Assistant written in Python that uses Voice Recognition and a Text-To-Speech engine. It can automate tasks such as Taking notes, Searching the web, Find locations, Open and close applications, Answer questions and more.
 
 
-## Authors
+## 👨‍💻 Authors
 
 - [@ashfaaqrifath](https://www.github.com/ashfaaqrifath)
 
 
-## Libraries Used
+## 📕 Packages Used
 * Pyttsx3
 ```
   pip install pyttsx3
@@ -53,7 +53,7 @@ Casper is a Desktop Assistant written in Python that uses Voice Recognition and 
 ```
   pip install SpeechRecognition
 ```
-## Functionalities
+## 🛠️ Functionalities
 
 - Google search
 - YouTube search
