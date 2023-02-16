@@ -23,7 +23,7 @@ def news_BBC(voice_var, log):
     query_api = {
         "source": "bbc-news",
         "sortBy": "top",
-        "apiKey": "9fe5ebe6f4c94e42b913758d8144699d"
+        "apiKey": "YOUR API KEY"
     }
     news_url = "https://newsapi.org/v1/articles"
     res = requests.get(news_url, params=query_api)
@@ -46,7 +46,7 @@ def news_BBC(voice_var, log):
 
 
 def news_category(voice_var, log):
-    newsapi = NewsApiClient(api_key="9fe5ebe6f4c94e42b913758d8144699d")
+    newsapi = NewsApiClient(api_key="YOUR API KEY")
     # input_country = input("Country: ")
     # input_countries = [f'{input_country.strip()}']
     # countries = {}
