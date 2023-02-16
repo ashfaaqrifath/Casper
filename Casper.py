@@ -147,7 +147,7 @@ def set_timer(countdown):
 ##################################################################################################
 
 def wolfram_API(question):
-    api_key = "Q3RGAU-UWQT2U8W2J"
+    api_key = "YOUR API KEY"
     client = wolframalpha.Client(api_key)
     result = client.query(question)
     wolfram_answer = str(next(result.results).text)
@@ -439,9 +439,9 @@ def command_engine(command): #The heart of Casper
 ###################################################################################################################
 
 if __name__ == "__main__":
-    # os.system('cmd /c "CasperIntro.gif"')
-    # time.sleep(4.5)
-    # os.system("taskkill /IM Microsoft.Photos.exe /F")
+    os.system('cmd /c "CasperIntro.gif"')
+    time.sleep(4.5)
+    os.system("taskkill /IM Microsoft.Photos.exe /F")
     os.system("cls")
     casper_alert("« ASSISTANT ACTIVATED »")
 
