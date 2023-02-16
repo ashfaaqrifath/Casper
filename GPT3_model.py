@@ -5,7 +5,7 @@ from chronicle_engine import chronicle_log
 from colorama import Fore, Back
 colorama.init(autoreset=True)
 
-openai.api_key = "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"
+openai.api_key = "YOUR API KEY"
 
 def GPT3(usr_prompt, voice_var, log):
     response = openai.Completion.create(
