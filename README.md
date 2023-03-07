@@ -55,33 +55,43 @@ Casper is a Desktop Assistant written in Python that uses Voice Recognition and 
 ```
 ## 🛠️ Functionalities
 
-- Google search
-- YouTube search
-- Wikipedia search
-- Open Chrome tabs
-- Open Incognito tabs
-- Activate VPN
-- Search locations
-- Activity logging
-- Disable activity logging (Blanket mode)
-- Delete all activity logs (Deletion protocol)
-- Record audio (Recording Mode)
-- Open and close programs
-- Open files
-- Open Task Manager
-- WolframAlpha knowledge engine
-- News API
-- Math calculations
-- Play music
-- Take notes
-- Say the time and date
-- Set timer
-- Beep on command
-- Change assistant voice
-- Greetings
-- Change desktop background
-- Clear recycle bin
-- Shutdown/Restart/Sign out PC
+• Search Google
+• Search YouTube
+• Search Wikipedia
+• Search Google News
+• Open Gmail
+• Access Facebook profile
+• Access Instagram account
+• Access Twitter account
+• Access source code from GitHub
+• Open chrome tabs
+• Open incognito tabs
+• Search locations
+• Activity logging (Chronicle Engine)
+• Disable activity logging (Stealth mode)
+• Delete all activity logs (Clean Slate protocol)
+• Open and close programs
+• Change desktop background
+• Clear recycle bin
+• Shutdown PC
+• Restart PC
+• Sign out of PC
+• Take notes
+• Say the time, date
+• Set timer
+• OpenAI GPT-3 API
+• News API
+• WolframAlpha knowledge engine API
+• Play music
+• Activate VPN
+• Open task manager
+• Change the assistant's voice
+• Record audio (Chronicle Audio Mode)
+• Respond to stuff (hard-coded responses)
+• Stand-By Mode
+• Text input mode
+• Password lock assistant (Sentry mode)
+• Greet according to the time
 
 
 ## Badges
